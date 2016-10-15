@@ -25,6 +25,18 @@ def api_v1():
     return resp
 
 
+@app.route('/v2', strict_slashes=False, methods=['GET'])
+def api_v2():
+    payload = [
+        {
+            'API': 'Version 2'
+        }
+    ]
+    data = json.dumps(payload)
+    resp = Response(data, status=200, mimetype='application/json')
+    return resp
+
+
 if __name__ == '__main__':
     parser = optparse.OptionParser(usage='python app.py -p ')
     parser.add_option('-p', '--port', action='store',
