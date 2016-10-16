@@ -19,3 +19,8 @@
     api_version: auto
     ports:
       - 80:80
+
+- pause: seconds=1
+
+- name: Run validation
+  script: validate.py
