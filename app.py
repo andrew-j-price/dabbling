@@ -17,7 +17,7 @@ def api_root():
 def api_v1():
     payload = [
         {
-            'API': 'Version 1'
+            'API': 'Version 1.0.0'
         }
     ]
     data = json.dumps(payload)
@@ -29,7 +29,7 @@ def api_v1():
 def api_v2():
     payload = [
         {
-            'API': 'Version 2'
+            'API': 'Version 2.1.0'
         }
     ]
     data = json.dumps(payload)

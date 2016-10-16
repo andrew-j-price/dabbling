@@ -1,0 +1,21 @@
+---
+
+- name: Build image
+  docker_image:
+    name: '{{ image_name }}'
+    tag: '{{ app_version }}'
+    path: .
+    api_version: auto
+    state: present
+    force: yes
+
+- name: Run container
+  docker_container:
+    name: branching_testing
+    image: '{{ image_name }}:{{ app_version }}'
+    state: started
+    restart: yes
+    restart_policy: always
+    api_version: auto
+    ports:
+      - 80:80

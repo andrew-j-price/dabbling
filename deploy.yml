@@ -1,0 +1,9 @@
+---
+
+- hosts: all
+  gather_facts: false
+  vars:
+    - image_name: 'branching'
+    - app_version: '2.1.0'
+  roles:
+    - deploy

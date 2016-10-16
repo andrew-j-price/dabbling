@@ -1,10 +1,3 @@
-###################################################################
-# Build image:                                                    #
-#   docker build --tag="branching" .                              #
-#                                                                 #
-# Run container:                                                  #
-#   docker run -p 80:80 branching                                 #
-###################################################################
 FROM alpine:3.4
 
 # Update
