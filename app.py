@@ -40,9 +40,8 @@ def api_v2():
 if __name__ == '__main__':
     parser = optparse.OptionParser(usage='python app.py -p ')
     parser.add_option('-p', '--port', action='store',
-                      dest='port', help='The port to listen on.')
+                      dest='port', help='The port to listen on. Default 80')
     (args, _) = parser.parse_args()
     if args.port is None:
-        print 'Missing required argument: -p/--port'
-        sys.exit(1)
+        args.port = 80
     app.run(host='0.0.0.0', port=int(args.port), debug=False)
