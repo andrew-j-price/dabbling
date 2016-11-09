@@ -7,5 +7,10 @@ python:
   - "3.5"
 install:
   - "pip install -r requirements.txt"
+  - "pip install pytest-flask"
+  - docker build -t test_container .
+  - docker run -d -p 127.0.0.1:80:80 --name test_container test_container
 script:
+  - pytest
   - ansible-playbook deploy.yml --syntax-check
+  - python roles/deploy/files/validate.py

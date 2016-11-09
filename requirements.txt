@@ -1,3 +1,2 @@
 Flask
 ansible>=2.0.0
-docker-py
