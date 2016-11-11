@@ -1,9 +1,7 @@
 #!/usr/bin/python
 from flask import Flask, json, jsonify, Response
-import optparse
 import os
 import socket
-import sys
 
 
 def my_app():

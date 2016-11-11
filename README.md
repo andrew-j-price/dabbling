@@ -1,6 +1,8 @@
-# branching
-[![Build Status](https://travis-ci.org/andrew-j-price/branching.svg?branch=master)](https://travis-ci.org/andrew-j-price/branching)
+# dabbling
+[![Build Status](https://travis-ci.org/andrew-j-price/dabbling.svg?branch=develop)](https://travis-ci.org/andrew-j-price/dabbling)
 
-This repo will serve no purpose to anyone but me.
+http://dabbling.herokuapp.com/
 
-Simply wanted to learn more about different branching techniques.
+This repo will probably serve no purpose to anyone but me :)
+
+Simply want to dabble in various subject areas.
