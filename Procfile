@@ -1,2 +1,2 @@
-heroku ps:scale web=1
-web: python app.py -p 80
+heroku ps:scale --app dabbling web=1
+web: sudo python app.py -p 80
