@@ -10,5 +10,5 @@ RUN pip install Flask
 # Bundle app source
 COPY app.py /src/app.py
 
-EXPOSE  80 5000
-CMD ["python", "/src/app.py", "-p 80"]
+EXPOSE  80
+CMD ["python", "/src/app.py"]

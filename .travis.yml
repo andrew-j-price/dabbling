@@ -10,7 +10,7 @@ install:
   - "pip install pytest-flask"
   - "pip install requests"
   - docker build -t test_container .
-  - docker run -d -p 127.0.0.1:80:80 --name test_container test_container
+  - docker run -d -p 127.0.0.1:80:5000 --name test_container test_container
 script:
   - pytest
   - ansible-playbook deploy.yml --syntax-check
