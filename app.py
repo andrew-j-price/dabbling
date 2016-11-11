@@ -34,7 +34,6 @@ def my_app():
 
 
 if __name__ == '__main__':
-    app = my_app()
     parser = optparse.OptionParser(usage='python app.py -p ')
     parser.add_option('-p', '--port', action='store',
                       dest='port', help='The port to listen on.')
@@ -42,4 +41,7 @@ if __name__ == '__main__':
     if args.port is None:
         print('Missing required argument: -p/--port')
         sys.exit(1)
-    app.run(host='0.0.0.0', port=int(args.port), debug=False)
+
+
+app = my_app()
+app.run(host='0.0.0.0', port=int(args.port), debug=False)
