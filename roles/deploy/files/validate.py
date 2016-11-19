@@ -4,7 +4,7 @@ import sys
 
 
 def default():
-    url = 'http://127.0.0.1:80'
+    url = 'http://127.0.0.1:5000'
     r = requests.get(url, timeout=3.0)
     if r.status_code == 200 and len(r.text) == 13:
         print('SUCCESS! Respone returned: ' + r.text)

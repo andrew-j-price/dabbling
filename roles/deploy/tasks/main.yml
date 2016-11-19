@@ -18,7 +18,7 @@
     restart_policy: always
     api_version: auto
     ports:
-      - 80:5000
+      - 5000:5000
 
 - pause: seconds=1
 
