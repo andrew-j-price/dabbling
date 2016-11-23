@@ -1,4 +1,3 @@
-#!/usr/bin/python
 from flask import Flask, json, jsonify, request, Response
 import os
 import socket
@@ -12,7 +11,7 @@ def my_app():
         return socket.gethostname() + '\n'
 
     @app.route("/ip", strict_slashes=False, methods=["GET"])
-    def get_my_ip():
+    def api_ip():
         return jsonify({'ip': request.remote_addr}), 200
 
     @app.route('/ping', strict_slashes=False, methods=["GET"])

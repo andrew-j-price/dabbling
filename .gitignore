@@ -1,4 +1,5 @@
 __pycache__/
-*.retry
 .cache/
+.venv/
+*.retry
 app.pyc

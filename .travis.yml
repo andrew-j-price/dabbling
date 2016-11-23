@@ -7,8 +7,6 @@ python:
   - "3.5"
 install:
   - "pip install -r requirements.txt"
-  - "pip install pytest-flask"
-  - "pip install requests"
   - docker build -t test_container .
   - docker run -d -p 127.0.0.1:5000:5000 --name test_container test_container
 script:

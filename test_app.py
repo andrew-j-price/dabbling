@@ -7,6 +7,10 @@ class TestApp:
         res = client.get(url_for('api_root'))
         assert res.status_code == 200
 
+    def test_ip(self, client):
+        res = client.get(url_for('api_ip'))
+        assert res.status_code == 200
+
     def test_ping(self, client):
         res = client.get(url_for('api_ping'))
         assert res.status_code == 200

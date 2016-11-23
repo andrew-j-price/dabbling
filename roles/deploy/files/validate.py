@@ -10,7 +10,8 @@ def default():
         print('SUCCESS! Respone returned: ' + r.text)
         sys.exit(0)
     else:
-        print('FAILURE')
+        print('FAILED. Response code: ' + str(r.status_code) +
+              '. Respone text: ' + r.text)
         sys.exit(2)
 
 
