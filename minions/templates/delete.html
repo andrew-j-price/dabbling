@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% from "form_macros.html" import render_field %}
+
+{% block title %}
+Delete a Minion
+{%  endblock %}
+
+{% block sidebar %}
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h1>Delete a Minion</h1>
+        <form action="" method="post">
+            {{form.hidden_tag()}}
+            <table>
+                {{ render_field(form.uuid, size=50) }}
+                <tr class="submit">
+                    <td></td>
+                    <td><button type="submit">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+{% endblock %}

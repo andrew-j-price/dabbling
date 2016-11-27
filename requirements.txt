@@ -1,4 +1,8 @@
 Flask==0.11.1
+Flask-WTF==0.13.1
+sqlalchemy==1.1.4
+flask-sqlalchemy==2.1
+flask-script==2.0.5
 ansible>=2.1.0.0
 pytest==3.0.3
 pytest-flask==0.10.0

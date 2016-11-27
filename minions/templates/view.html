@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}
+View all Minions
+{%  endblock %}
+
+{% block sidebar %}
+{% endblock %}
+
+{% block content %}
+    <article>
+        <header>
+            <h1>My Minions</h1>
+            <table border="1" width="100%">
+                <tr>
+                    <th> ID </th>
+                    <th> Name </th>
+                    <th> Color </th>
+                    <th> Age </th>
+                </tr>
+            {% for i in records %}
+                <tr>
+                    <td> {{ i.id }} </td>
+                    <td> {{ i.name }} </td>
+                    <td> {{ i.color }} </td>
+                    <td> {{ i.age }} </td>
+                </tr>
+            {% else %}
+                <td colspan="4">There are no minions :( in the database</td>
+            {% endfor %}
+            </table>
+        </header>
+
+    </article>
+{% endblock %}
