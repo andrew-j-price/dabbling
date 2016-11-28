@@ -12,4 +12,5 @@ install:
 script:
   - pytest
   - ansible-playbook deploy.yml --syntax-check
+  - python manage.py initdb
   - python roles/deploy/files/validate.py

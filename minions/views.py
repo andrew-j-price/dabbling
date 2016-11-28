@@ -1,7 +1,8 @@
-from flask import render_template, flash, redirect, url_for, abort
+from flask import flash, jsonify, redirect, render_template, request, url_for
+import socket
 
 from minions import app, db
-from forms import TrackerForm, TrackerFormToDelete
+from forms import TrackerFormToInsert, TrackerFormToDelete
 from models import Tracker
 
 
@@ -13,7 +14,7 @@ def index():
 
 @app.route('/add', strict_slashes=False, methods=['GET', 'POST'])
 def add():
-    form = TrackerForm()
+    form = TrackerFormToInsert()
     if form.validate_on_submit():
         name = form.name.data
         color = form.color.data
@@ -44,6 +45,22 @@ def view():
     for i in records:
         print i.name
     return render_template('view.html', records=records)
+
+
+@app.route("/host", strict_slashes=False, methods=["GET"])
+@app.route("/hostname", strict_slashes=False, methods=["GET"])
+def api_root():
+    return socket.gethostname() + '\n'
+
+
+@app.route("/ip", strict_slashes=False, methods=["GET"])
+def api_ip():
+    return jsonify({'ip': request.remote_addr}), 200
+
+
+@app.route('/ping', strict_slashes=False, methods=["GET"])
+def api_ping():
+    return jsonify(ping='pong')
 
 
 @app.errorhandler(404)

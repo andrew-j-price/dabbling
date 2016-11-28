@@ -1,15 +1,17 @@
 #! /usr/bin/env python
-
+import os
 from minions import app, db
 from minions.models import Tracker
 from flask_script import Manager, Server, prompt_bool
 
+port = int(os.environ.get('PORT', 5000))
+
 manager = Manager(app)
 
-# Turn on debugger by default and reloader
 manager.add_command("runserver", Server(
     use_debugger=True,
     use_reloader=True,
+    port=int(port),
     host='0.0.0.0'))
 
 

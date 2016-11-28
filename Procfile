@@ -1,1 +1,1 @@
-web: python app.py ${PORT}
+web: python manage.py runserver -p ${PORT}

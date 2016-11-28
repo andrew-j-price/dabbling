@@ -3,7 +3,7 @@ from wtforms.fields import StringField
 from wtforms.validators import DataRequired
 
 
-class TrackerForm(FlaskForm):
+class TrackerFormToInsert(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
     color = StringField('Color', validators=[DataRequired()])
     age = StringField('Age', validators=[DataRequired()])

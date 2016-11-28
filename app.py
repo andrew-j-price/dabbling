@@ -7,6 +7,8 @@ def my_app():
     app = Flask(__name__)
 
     @app.route('/')
+    @app.route("/host", strict_slashes=False, methods=["GET"])
+    @app.route("/hostname", strict_slashes=False, methods=["GET"])
     def api_root():
         return socket.gethostname() + '\n'
 
